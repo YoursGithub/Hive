@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/navbar";
+import Image from "next/image";
 
 const HiveHomepage = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -64,7 +65,7 @@ const HiveHomepage = () => {
       {/* Main Section */}
       <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-6">
         <div>
-          <img src="/assets/Hive.png" width={180} alt="" />
+          <Image src="/assets/Hive.png" width={180} alt="" />
         </div>
 
         <div className="flex items-center space-x-4 mt-10 mb-16">
@@ -97,7 +98,7 @@ const HiveHomepage = () => {
       <footer className="relative z-10 bg-[#0A0A0A] text-white py-12">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-yellow-500">#</span>don't just order, have fun
+            <span className="text-yellow-500">#</span>don&apos;t just order, have fun
           </h2>
           <p className="text-gray-300 text-sm max-w-2xl mx-auto leading-relaxed">
             Our Curated Baskets make your work easy and affordable, combining

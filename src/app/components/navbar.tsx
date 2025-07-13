@@ -2,6 +2,8 @@
 
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -19,15 +21,15 @@ const Navbar = () => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-2">
-            <img src="/assets/logo.png" width={30} alt="" />
+            <Image src="/assets/logo.png" width={30} alt="" />
           </div>
           <div className="hidden md:flex space-x-6 text-gray-600 blur-[2px]">
-            <a href="/" className="hover:text-gray-900 transition-colors">
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               Hive Blog
-            </a>
-            <a href="/" className="hover:text-gray-900 transition-colors">
+            </Link>
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               Hive Creators
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -53,15 +55,15 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-6 text-gray-600 blur-[2px]">
-          <a href="#" className="hover:text-gray-900 transition-colors">
+          <Link href="#" className="hover:text-gray-900 transition-colors">
             Login Dashboard
-          </a>
-          <a href="#" className="hover:text-gray-900 transition-colors">
+          </Link>
+          <Link href="#" className="hover:text-gray-900 transition-colors">
             Report Issue
-          </a>
+          </Link>
           <div className="flex gap-6">
-            <img src="/assets/googleplay.svg" width={20} alt="" />
-            <img src="/assets/apple.svg" width={20} alt="" />
+            <Image src="/assets/googleplay.svg" width={20} alt="" />
+            <Image src="/assets/apple.svg" width={20} alt="" />
           </div>
         </div>
       </div>
