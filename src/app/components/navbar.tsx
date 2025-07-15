@@ -21,8 +21,9 @@ const Navbar = () => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-2">
-            <Image src="/assets/logo.png" width={30} alt="" />
+            <Image src="/assets/logo.png" width={30} height={30} alt="" />
           </div>
+
           <div className="hidden md:flex space-x-6 text-gray-600 blur-[2px]">
             <Link href="/" className="hover:text-gray-900 transition-colors">
               Hive Blog
@@ -33,7 +34,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex items-center rounded-lg overflow-hidden bg-black border border-black p-1">
+        <div className="hidden md:flex items-center rounded-lg overflow-hidden bg-black border border-black p-1">
           {tabs.map((tab) => {
             const isActive = pathname === tab.href;
             const isNearhive = tab.label === "Nearhive";
@@ -42,7 +43,7 @@ const Navbar = () => {
               <button
                 key={tab.href}
                 onClick={() => router.push(tab.href)}
-                className={`px-8 py-3 text-[15px] cursor-pointer font-medium transition-all duration-200 ${
+                className={`px-7 py-2 text-[15px] cursor-pointer font-medium transition-all duration-200 ${
                   isActive
                     ? "bg-[#202020] text-white rounded-lg"
                     : "text-white"
@@ -62,8 +63,8 @@ const Navbar = () => {
             Report Issue
           </Link>
           <div className="flex gap-6">
-            <Image src="/assets/googleplay.svg" width={20} alt="" />
-            <Image src="/assets/apple.svg" width={20} alt="" />
+            <Image src="/assets/googleplay.svg" width={20} height={20} alt="" />
+            <Image src="/assets/apple.svg" width={20} height={20} alt="" />
           </div>
         </div>
       </div>
